@@ -15,6 +15,10 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Glide.with(this).asGif().load("https://i.gifer.com/AGNB.gif").into(ivSplash)
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         Handler().postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
