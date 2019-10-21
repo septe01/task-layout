@@ -27,7 +27,9 @@ class JobsAdapter : RecyclerView.Adapter<JobsAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.tvComapny.text = list[position]
 
-        val options: RequestOptions = RequestOptions().circleCrop().error(R.drawable.ic_error).placeholder(
+        val options: RequestOptions = RequestOptions().circleCrop().error(
+            R.drawable.ic_error
+        ).placeholder(
             R.drawable.ic_loading
         )
 
