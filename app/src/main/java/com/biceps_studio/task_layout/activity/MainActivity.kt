@@ -1,11 +1,15 @@
-package com.biceps_studio.task_layout
+package com.biceps_studio.task_layout.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.biceps_studio.task_layout.fragment.JobsFragment
+import com.biceps_studio.task_layout.R
+import com.biceps_studio.task_layout.fragment.SavedFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_header.*
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {

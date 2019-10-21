@@ -1,9 +1,10 @@
-package com.biceps_studio.task_layout
+package com.biceps_studio.task_layout.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.biceps_studio.task_layout.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_row.view.*
@@ -26,7 +27,9 @@ class JobsAdapter : RecyclerView.Adapter<JobsAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.tvComapny.text = list[position]
 
-        val options: RequestOptions = RequestOptions().circleCrop().error(R.drawable.ic_error).placeholder(R.drawable.ic_loading)
+        val options: RequestOptions = RequestOptions().circleCrop().error(R.drawable.ic_error).placeholder(
+            R.drawable.ic_loading
+        )
 
         Glide.with(holder.itemView).load(images[position]).apply(options).into(holder.itemView.ivCompany)
     }
