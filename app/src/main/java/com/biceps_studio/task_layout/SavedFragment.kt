@@ -36,7 +36,7 @@ class SavedFragment : Fragment() {
         list.add("Tokopedia")
         images.add("https://upload.wikimedia.org/wikipedia/id/1/13/Tokopedia_Icon.png")
         list.add("Slack")
-        images.add("https://user-images.githubusercontent.com/819186/51553744-4130b580-1e7c-11e9-889e-486937b69475.png")
+        images.add("https://user-images.githubusercontent.com/819186/51553744-4130b580-1e7c-11e9-889e-486937b69475.pngaklsndlaks")
 
         val jobsAdapter = JobsAdapter()
         jobsAdapter.list = list

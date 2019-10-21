@@ -26,6 +26,8 @@ class JobsAdapter : RecyclerView.Adapter<JobsAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.tvComapny.text = list[position]
 
-        Glide.with(holder.itemView).load(images[position]).apply(RequestOptions.circleCropTransform()).into(holder.itemView.ivCompany)
+        val options: RequestOptions = RequestOptions().circleCrop().error(R.drawable.ic_error).placeholder(R.drawable.ic_loading)
+
+        Glide.with(holder.itemView).load(images[position]).apply(options).into(holder.itemView.ivCompany)
     }
 }
