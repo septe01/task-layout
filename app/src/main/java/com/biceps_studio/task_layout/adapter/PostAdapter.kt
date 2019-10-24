@@ -10,7 +10,13 @@ import kotlinx.android.synthetic.main.item_post.view.*
 
 class PostAdapter : RecyclerView.Adapter<PostAdapter.ViewHolder>() {
 
-    var arrayList: ArrayList<PostModel> = ArrayList()
+    private var arrayList: ArrayList<PostModel> = ArrayList()
+
+    private lateinit var onListener: OnListener
+
+    fun setOnDeletePost(onListener: OnListener){
+        this.onListener = onListener
+    }
 
     fun updateData(arrayList: ArrayList<PostModel>){
         this.arrayList = arrayList
@@ -33,6 +39,13 @@ class PostAdapter : RecyclerView.Adapter<PostAdapter.ViewHolder>() {
 
         holder.itemView.tvTitle.text = postModel.title
         holder.itemView.tvContent.text = postModel.body
+
+        holder.itemView.btnDelete.setOnClickListener { onListener.onDeletePost(position) }
+        holder.itemView.cvPost.setOnClickListener { onListener.onClickPost(postModel.id) }
     }
 
+    interface OnListener {
+        fun onDeletePost(int: Int)
+        fun onClickPost(int: Int)
+    }
 }

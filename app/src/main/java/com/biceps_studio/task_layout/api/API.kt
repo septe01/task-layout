@@ -73,7 +73,7 @@ class API {
         }
 
         //Memanggil fungsi addPost yg ada di interface Sevice secara ringkas
-        fun addPost(hashMap: HashMap<String, Objects>, callback: Callback<PostModel>){
+        fun addPost(hashMap: HashMap<String, String>, callback: Callback<PostModel>){
             getService().addPost(hashMap).enqueue(callback)
         }
 
@@ -97,7 +97,7 @@ class API {
         fun getPost(@Path("id") id: Int) : Call<PostModel>
 
         @POST("posts")
-        fun addPost(@Body hashMap: HashMap<String, Objects>) : Call<PostModel>
+        fun addPost(@Body hashMap: HashMap<String, String>) : Call<PostModel>
 
         @PUT("posts/{id}")
         fun updatePost(@Path("id") id: Int, @Body postModel: PostModel) : Call<PostModel>

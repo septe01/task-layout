@@ -8,6 +8,8 @@ import android.widget.Toast
 class Utils {
 
     companion object {
+        const val ID_POST = "idPost"
+
         //Pengecekan internet
         fun isNetworkConected(context: Context) : Boolean {
             val cm: ConnectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
