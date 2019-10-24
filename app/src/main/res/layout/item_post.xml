@@ -36,16 +36,31 @@
             android:fontFamily="@font/cambria"
             tools:text="Hari ini saya mendapatkan materi REST API dan SQLIte."/>
 
-        <Button
-            android:id="@+id/btnDelete"
-            android:layout_gravity="end"
+        <RelativeLayout
             android:layout_marginTop="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/holo_red_dark"
-            android:textColor="@android:color/white"
-            android:text="Hapus post"
-            android:padding="16dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivSaved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_unstar"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:text="Hapus post"
+                android:padding="16dp"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
