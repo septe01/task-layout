@@ -10,7 +10,7 @@ import com.biceps_studio.task_layout.adapter.JobsAdapter
 import com.biceps_studio.task_layout.R
 import com.biceps_studio.task_layout.`interface`.JobsFragmentListener
 import com.biceps_studio.task_layout.activity.MainActivity
-import com.biceps_studio.task_layout.apimodel.JobModel
+import com.biceps_studio.task_layout.data.JobModel
 import kotlinx.android.synthetic.main.fragment_list.*
 import java.util.*
 
@@ -53,12 +53,42 @@ class JobsFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        list.add(JobModel("Tokopedia", "https://upload.wikimedia.org/wikipedia/id/1/13/Tokopedia_Icon.png"))
-        list.add(JobModel("Slack", "https://user-images.githubusercontent.com/819186/51553744-4130b580-1e7c-11e9-889e-486937b69475.png"))
-        list.add(JobModel("Tokopedia", "https://upload.wikimedia.org/wikipedia/id/1/13/Tokopedia_Icon.pngasdaf"))
-        list.add(JobModel("Slack", "https://user-images.githubusercontent.com/819186/51553744-4130b580-1e7c-11e9-889e-486937b69475.png"))
-        list.add(JobModel("Tokopedia", "https://upload.wikimedia.org/wikipedia/id/1/13/Tokopedia_Icon.png"))
-        list.add(JobModel("Slack", "https://user-images.githubusercontent.com/819186/51553744-4130b580-1e7c-11e9-889e-486937b69475.pngasda"))
+        list.add(
+            JobModel(
+                "Tokopedia",
+                "https://upload.wikimedia.org/wikipedia/id/1/13/Tokopedia_Icon.png"
+            )
+        )
+        list.add(
+            JobModel(
+                "Slack",
+                "https://user-images.githubusercontent.com/819186/51553744-4130b580-1e7c-11e9-889e-486937b69475.png"
+            )
+        )
+        list.add(
+            JobModel(
+                "Tokopedia",
+                "https://upload.wikimedia.org/wikipedia/id/1/13/Tokopedia_Icon.pngasdaf"
+            )
+        )
+        list.add(
+            JobModel(
+                "Slack",
+                "https://user-images.githubusercontent.com/819186/51553744-4130b580-1e7c-11e9-889e-486937b69475.png"
+            )
+        )
+        list.add(
+            JobModel(
+                "Tokopedia",
+                "https://upload.wikimedia.org/wikipedia/id/1/13/Tokopedia_Icon.png"
+            )
+        )
+        list.add(
+            JobModel(
+                "Slack",
+                "https://user-images.githubusercontent.com/819186/51553744-4130b580-1e7c-11e9-889e-486937b69475.pngasda"
+            )
+        )
 
         jobsAdapter.list = list
 

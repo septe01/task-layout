@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.biceps_studio.task_layout.R
-import com.biceps_studio.task_layout.apimodel.JobModel
+import com.biceps_studio.task_layout.data.JobModel
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_row.view.*

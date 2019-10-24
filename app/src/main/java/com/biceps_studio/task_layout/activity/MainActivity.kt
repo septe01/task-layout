@@ -12,6 +12,8 @@ import com.biceps_studio.task_layout.fragment.JobsFragment
 import com.biceps_studio.task_layout.R
 import com.biceps_studio.task_layout.`interface`.JobsFragmentListener
 import com.biceps_studio.task_layout.`interface`.SavedFragmentListener
+import com.biceps_studio.task_layout.fragment.ApiFragment
+import com.biceps_studio.task_layout.fragment.SQLiteFragment
 import com.biceps_studio.task_layout.fragment.SavedFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_header.*
@@ -51,6 +53,8 @@ class MainActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(JobsFragment(), "For you")
         adapter.addFragment(SavedFragment(), "Saved")
+        adapter.addFragment(ApiFragment(), "REST API")
+        adapter.addFragment(SQLiteFragment(), "SQLite")
 
         viewPager.adapter = adapter
 
