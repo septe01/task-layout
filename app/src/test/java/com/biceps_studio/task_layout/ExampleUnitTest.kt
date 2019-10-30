@@ -30,33 +30,33 @@ class ExampleUnitTest {
     //test false
     @Test
     fun isMailFalse(){
-        assertFalse(email.isEmailValid("septesthia@gmail.com    "))//error jka assertTrue karena ada space
+        assertFalse(email.isEmailValid("septesthia@gmail.com    "))//error jka pakai assertTrue karena ada space
     }
     @Test
     fun isMailFalseTwo(){
-        assertFalse(email.mailValid("Septe@com  "))
+        assertFalse(email.mailValid("Septe@com  "))//error jka pakai assertTrue karena tidak valid
     }
     @Test
     fun isMailFalseTree(){
-        assertFalse(email.mailses("com   "))
+        assertFalse(email.mailses("com   "))//error jka pakai assertTrue karena tidak valid
     }
 
 //    password 3x test ( 1x true, 2x false)
-    //test True
+    //test Truete
     @Test
     fun isPasswordTrue(){
-        assertTrue(pass.passTrue("septe123","septe123"))
+        assertTrue(pass.passTrue("septe123","septe123"))//true krna pass 1 dan 2 sama dan jumlah nya jg sama
     }
 
     //test False
     @Test
     fun isPasswordFalse(){
-        assertFalse(pass.passTrue("septe123","septe")) //tidak sama dan kurang dari 6
+        assertFalse(pass.passTrue("septe123","septe")) //true karena pass 1 dan 2 tidak sama dan kurang dari 6
     }
 
     @Test
     fun isPasswordFalseTwo(){
-        assertFalse(pass.passTrue("septe123","septe123 ")) //sma tpi ada space nya
+        assertFalse(pass.passTrue("septe123","septe123 ")) //true karena pass 1 dan 2 sama tapi pass 2 ada space
     }
 }
 
@@ -98,9 +98,9 @@ class mails{
 
 class passwords{
 
-    fun passTrue(pass1: String, pass2: String):Boolean{
+    fun passTrue(pass1: String, pass2: String):Boolean {
 
-            return (pass1 == pass2 && pass1.toInt() <= 6)
+        return (pass1 == pass2 && pass1.length >= 6)
+
     }
-
 }
