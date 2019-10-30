@@ -10,6 +10,8 @@
     <string name="posted_more_than_two_weeks_ago">Dikirim bebrapa waktu yang lalu</string>
     <string name="software_engineer">Insinyur perangkat lunak</string>
     <string name="full_time_n_jakarta">* Waktu penuh * Jakarta</string>
+    <string name="fultame">* Waktu penuh </string>
+    <string name="jakarta">* Jakarta</string>
     <string name="delete_post">Hapus post</string>
     <string name="add_post">Tambah post</string>
     <string name="update_post">Perbarui post</string>

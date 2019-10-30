@@ -7,7 +7,9 @@
     <string name="search">Search</string>
     <string name="posted_more_than_two_weeks_ago">Posted more than two weeks ago</string>
     <string name="software_engineer">Software Engineer</string>
-    <string name="full_time_n_jakarta">* Full Time * Jakarta</string>
+    <string name="full_time_n_jakarta">* Full Time  * Jakarta</string>
+    <string name="fultame">* Full Time</string>
+    <string name="jakarta">* Jakarta</string>
     <string name="delete_post">Delete post</string>
     <string name="add_post">Add post</string>
     <string name="update_post">Update post</string>
