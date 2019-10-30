@@ -6,47 +6,78 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="0dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/llLeague"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true">
 
-        <TextView
-            android:layout_marginTop="8dp"
+            <Button
+                android:id="@+id/btnIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="IN"
+                android:textSize="16sp"/>
+
+
+            <Button
+                android:id="@+id/btnEn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="EN"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="JOBS"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="@android:color/black"
-            android:padding="8dp"/>
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/etSearch"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:drawableStart="@drawable/ic_search"
-            android:drawablePadding="8dp"
-            android:hint="Search"
-            android:textColorHint="@android:color/white"
-            android:textColor="@android:color/white"
-            android:padding="8dp"
-            android:background="@drawable/bg_input"/>
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/jobs"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:padding="8dp"/>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabSelectedTextColor="@android:color/holo_red_dark"
-            app:tabTextColor="@android:color/darker_gray"
-            app:tabMode="fixed"
-            app:tabIndicatorColor="@android:color/holo_red_dark"/>
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="8dp"
+                android:hint="Search"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:padding="8dp"
+                android:background="@drawable/bg_input"/>
 
-    </LinearLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabSelectedTextColor="@android:color/holo_red_dark"
+                app:tabTextColor="@android:color/darker_gray"
+                app:tabMode="fixed"
+                app:tabIndicatorColor="@android:color/holo_red_dark"/>
+
+        </LinearLayout>
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

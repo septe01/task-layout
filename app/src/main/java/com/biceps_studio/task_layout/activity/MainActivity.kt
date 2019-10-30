@@ -1,5 +1,7 @@
 package com.biceps_studio.task_layout.activity
 
+import android.content.res.Configuration
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -15,8 +17,11 @@ import com.biceps_studio.task_layout.`interface`.SavedFragmentListener
 import com.biceps_studio.task_layout.fragment.ApiFragment
 import com.biceps_studio.task_layout.fragment.SQLiteFragment
 import com.biceps_studio.task_layout.fragment.SavedFragment
+import com.biceps_studio.task_layout.utils.Local
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_header.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
@@ -24,9 +29,43 @@ class MainActivity : AppCompatActivity() {
     var jobsFragmentListener: JobsFragmentListener? = null
     var savedFragmentListener: SavedFragmentListener? = null
 
+    private lateinit var locale: Locale
+    private lateinit var configuration: Configuration
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        configuration = Resources.getSystem().configuration
+
+        val id: String = Local.getLocal(this)
+
+        if (id == "en") {
+            btnEn.setBackgroundColor(getColor(android.R.color.darker_gray))
+        } else {
+            btnIn.setBackgroundColor(getColor(android.R.color.darker_gray))
+        }
+
+        btnEn.setOnClickListener {
+            locale = Locale( "en")
+            configuration.locale = locale
+            resources.updateConfiguration(configuration, resources.displayMetrics)
+
+            Local.saveLocal(this, locale.language)
+
+            recreate()
+        }
+
+
+
+        btnIn.setOnClickListener {
+            locale = Locale("in")
+            configuration.locale = locale
+            resources.updateConfiguration(configuration, resources.displayMetrics)
+
+            recreate()
+        }
+
 
         initFragment()
         initEvent()
